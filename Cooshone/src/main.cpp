@@ -75,7 +75,7 @@ void autonomous() {
  * task, not resume it from where it left off.
  */
 void opcontrol() {
-  stick.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
+  stick.set_brake_mode(pros::E_MOTOR_BRAKE_BRAKE);
   while (true) {
     tankDrive();
     controlFlywheel();

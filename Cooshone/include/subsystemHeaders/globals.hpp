@@ -15,9 +15,10 @@ extern pros :: Motor flywheel;
 extern pros :: Motor stick;
 
 //other stuff
-
+extern pros :: ADIPort leftWing;
+extern pros :: ADIPort rightWing;
 extern pros :: Controller controller;
-extern pros :: Imu inertial;
+//extern pros :: Imu inertial;
 
 //lemlib shi 
 
@@ -34,14 +35,16 @@ extern lemlib::Chassis chassis;
 
 //ports 
 
-#define leftFrontPort 1
-#define leftMiddlePort 2
-#define leftBackPort 3
-#define rightFrontPort 4
-#define rightMiddlePort 5 
-#define rightBackPort 6
+#define leftFrontPort 20
+#define leftMiddlePort 9
+#define leftBackPort 8
+#define rightFrontPort 11
+#define rightMiddlePort 1 
+#define rightBackPort 2
 
-#define flywheelPort 7 
-#define stickPort 8
+#define flywheelPort 3
+#define stickPort 10
 
-#define inertialPort 9
+#define leftWingPort 'A'
+#define rightWingPort 'B'
+#define inertialPort 4

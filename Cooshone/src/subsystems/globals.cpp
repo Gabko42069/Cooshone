@@ -14,6 +14,8 @@ pros :: Motor rightBack(rightBackPort, pros ::E_MOTOR_GEARSET_06);
 pros :: Motor flywheel(flywheelPort, pros::E_MOTOR_GEARSET_06);
 pros :: Motor stick(stickPort, pros::E_MOTOR_GEARSET_06);
 
+pros :: ADIPort leftWing(leftWingPort,pros::E_ADI_DIGITAL_OUT);
+pros :: ADIPort rightWing(rightWingPort,pros::E_ADI_DIGITAL_OUT);
 pros :: Controller controller(pros::E_CONTROLLER_MASTER);
 pros::Imu inertial(inertialPort);
 
@@ -27,8 +29,8 @@ lemlib::Drivetrain_t drivetrain = {
     &left_side_motors,
     &right_side_motors,
     13,
-    4,
-    300,
+    3.25,
+    360,
     8
     };
 
@@ -37,7 +39,7 @@ lemlib::OdomSensors_t sensors = {
     nullptr,
     nullptr,
     nullptr,
-    &inertial};
+    nullptr};
 lemlib::ChassisController_t lateralController = {
     20, // kP
     50, // kD

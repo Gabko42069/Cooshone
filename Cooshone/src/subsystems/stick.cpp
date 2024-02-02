@@ -6,14 +6,18 @@ void setStick(int power)
 }
 
 void controlStick()
-{
-    if(controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_UP))
+{   
+    if(controller.get_digital(DIGITAL_L2))
     {
         setStick(127);
     }
-    if(controller.get_digital_new_press(DIGITAL_DOWN))
+    else if(controller.get_digital(DIGITAL_L1))
     {
         setStick(-127);
+    }
+    else
+    {
+        setStick(0);
     }
 
 }

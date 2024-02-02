@@ -80,6 +80,7 @@ void opcontrol(void);
 #include "subsystemHeaders/driver.hpp"
 #include "subsystemHeaders/flywheel.hpp"
 #include "subsystemHeaders/stick.hpp"
+#include "subsystemHeaders/piston.hpp"
 #include "autoSelect/selection.h"
 #include "autons.hpp"
 
