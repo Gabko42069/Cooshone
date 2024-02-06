@@ -58,7 +58,15 @@ void competition_initialize() {}
  * from where it left off.
  */
 void autonomous() {
-	
+	/*if (selector::auton == 3) {
+    tester();
+  }
+  if (selector::auton == 2) {
+    tester();
+  }*/
+  if (selector::auton == 1) {
+    auton1();
+  }
 }
 
 /**
@@ -80,6 +88,7 @@ void opcontrol() {
     tankDrive();
     controlFlywheel();
     controlStick();
+    controlPistons();
     pros::delay(20);
   }
 }

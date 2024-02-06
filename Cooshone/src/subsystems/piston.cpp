@@ -11,4 +11,10 @@ void controlPistons()
     {
         rightWing.set_value(!rightWing.get_value());
     }
+    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_DOWN))
+    {
+        leftWing.set_value(!leftWing.get_value());
+        rightWing.set_value(!rightWing.get_value());
+    }
+    
 }
